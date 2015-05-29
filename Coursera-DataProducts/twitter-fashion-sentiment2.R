@@ -7,13 +7,16 @@ library(stringr)
 library(ggplot2)
 library(lubridate)
 
+#download key
+key_data = read.csv(file="twitter_fashion.key", header=T, sep=',')
+
 #connect to API
 #download.file(url='http://curl.haxx.se/ca/cacert.pem', destfile='cacert.pem')
 reqURL <- "https://api.twitter.com/oauth/request_token"
 accessURL <- "https://api.twitter.com/oauth/access_token"
 authURL <- "https://api.twitter.com/oauth/authorize"
-consumer_key = 'kHvAEPPn37oyrQPaXc3zY8eAa'
-consumer_secret= 'kZvuYaMV95mIeSCR2X40t8UqEVmx6JAmTu92FyzGyppQPsi120'
+consumer_key = key_data[['consumerKey']]
+consumer_secret= key_data[['consumerSecret']]
 
 setup_twitter_oauth(consumer_key, consumer_secret, access_token=NULL, access_secret=NULL)
 # twitCred <- OAuthFactory$new(consumerKey=consumerKey,

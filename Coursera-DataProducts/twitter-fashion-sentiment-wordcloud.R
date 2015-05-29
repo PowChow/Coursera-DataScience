@@ -8,22 +8,6 @@ library(ggplot2)
 library(lubridate)
 
 #connect to API
-#download.file(url='http://curl.haxx.se/ca/cacert.pem', destfile='cacert.pem')
-# reqURL <- "https://api.twitter.com/oauth/request_token"
-# accessURL <- "https://api.twitter.com/oauth/access_token"
-# authURL <- "https://api.twitter.com/oauth/authorize"
-# consumerKey = 'kHvAEPPn37oyrQPaXc3zY8eAa'
-# consumerSecret= 'kZvuYaMV95mIeSCR2X40t8UqEVmx6JAmTu92FyzGyppQPsi120'
-# 
-# twitCred <- OAuthFactory$new(consumerKey=consumerKey,
-#                              consumerSecret=consumerSecret ,
-#                              requestURL=reqURL,
-#                              accessURL=accessURL,
-#                              authURL=authURL)
-# twitCred$handshake(cainfo = system.file('CurlSSL', 'cacert.pem', package = 'RCurl')) #There is URL in Console. You need to go to it, get code and enter it on Console
-# save(twitCred, file='twitter authentication.Rdata')
-# load('twitter authentication.Rdata') #Once you launch the code first time, you can start from this line in the future (libraries should be connected)
-# registerTwitterOAuth(twitCred)
 
 #######################################################################################
 #################### FUNCTION: SEARCH FOR TWEETS AND OUTPUT #########################
